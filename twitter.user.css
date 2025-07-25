@@ -66,7 +66,7 @@
 	}
 
 	/* make a space between bookmark and share icon */
-	div:has(> div[data-testid='bookmark']) {
+	div:has(> [data-testid='bookmark']) {
 		flex: 1 1 0;
 	}
 }
