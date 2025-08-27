@@ -3,7 +3,7 @@
 @namespace    userstyles.xnu.kr/youtube
 @description  Custom theme to use YouTube anonymously
 @author       Xnuk Shuman
-@version      2024.05.01
+@version      2024.08.27
 @preprocessor default
 @license      AGPL-3.0-or-later
 ==/UserStyle== */
@@ -160,7 +160,7 @@
 		background-color: rgba(0, 0, 0, 0.7);
 		width: 100%;
 		max-width: none;
-		position: absolute;
+		position: relative;
 		top: max(480px, min(calc((9 / 16) * 100vw), calc(100vh - 60px)));
 
 
