@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name     Baekjoon Drag-n-Drop Uploader
 // @description 이제 제출할 파일을 무료로 에디터에 끌어다 놓으세요 확장자에 따른 언어 감지도 해준다 백준저지 API 만들어주세요
-// @version  1
+// @version  1.1
 // @grant    none
 // @run-at   document-end
 // @match    https://acmicpc.net/submit/*
@@ -124,7 +124,8 @@
 		input('language', language)
 		input('code_open', $('input[name=code_open]:checked'))
 		input('source', source)
-		input('csrf_key', $('input[name=csrf_key]'))
+		// input('csrf_key', $('input[name=csrf_key]'))
+		input('cf-turnstile-response', $('input[name=cf-turnstile-response]'))
 		document.body.appendChild(newForm)
 		newForm.submit()
 	}
