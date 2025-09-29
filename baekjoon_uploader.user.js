@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name     Baekjoon Drag-n-Drop Uploader
 // @description 이제 제출할 파일을 무료로 에디터에 끌어다 놓으세요 확장자에 따른 언어 감지도 해준다 백준저지 API 만들어주세요
-// @version  1.1
+// @version  1.2
 // @grant    none
 // @run-at   document-end
 // @match    https://acmicpc.net/submit/*
@@ -15,7 +15,7 @@
 	const languages = {
 		c: [0, 59, 75, 77, 101, 102, 103, 104],
 		c99: [0],
-		cpp: [1, 49, 60, 66, 67, 84, 85, 88, 95, 96],
+		cpp: [1, 49, 60, 66, 67, 84, 85, 88, 95, 96, 114, 115],
 		pas: [2],
 		pp: [2],
 		pascal: [2],
@@ -57,7 +57,7 @@
 		cpy: [35],
 		pike: [41],
 		sed: [43],
-		rs: [44, 94, 113],
+		rs: [44, 94, 113, 116],
 		intercal: [47],
 		bc: [48],
 		txt: [58],
