@@ -8,26 +8,29 @@
 @license      AGPL-3.0-or-later
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://twitter.com"), url-prefix("https://x.com")
-{
-	div[data-testid='primaryColumn'],
-	div[data-testid='primaryColumn'] > div:only-child > div:last-child,
+@-moz-document url-prefix("https://twitter.com"), url-prefix("https://x.com") {
+	div[data-testid="primaryColumn"],
+	div[data-testid="primaryColumn"] > div:only-child > div:last-child,
 	.r-1ye8kvj:only-child {
 		max-width: none !important;
 	}
 
-	div[data-testid='sidebarColumn'] {
+	div[data-testid="sidebarColumn"] {
 		display: none;
 	}
 
-	div[data-testid='DMDrawer'] {
+	div[data-testid="DMDrawer"] {
 		display: none;
 	}
 
-	a[href='/i/verified-choose'],
-	a[href='/i/premium_sign_up'],
-	a[href='/i/verified-orgs-signup'],
-	a[href='/i/grok'] {
+	a[href="/i/verified-choose"],
+	a[href="/i/premium_sign_up"],
+	a[href="/i/verified-orgs-signup"],
+	a[href="/jobs"],
+	a[href="/i/grok"],
+	a[href="/settings/monetization"],
+	a[href^="https://ads.x.com"],
+	button[aria-label^="Grok"] {
 		display: none;
 	}
 
@@ -35,7 +38,7 @@
 		display: none;
 	}
 
-	div[data-testid='card.layoutLarge\.media'] > a[aria-label] {
+	div[data-testid="card.layoutLarge\.media"] > a[aria-label] {
 		&::after {
 			content: attr(aria-label);
 			display: block;
@@ -55,18 +58,18 @@
 	}
 
 	/* hide the view analytics icon */
-	div:has(> a[href$='/analytics'][aria-label][role='link']),
+	div:has(> a[href$="/analytics"][aria-label][role="link"]),
 	div:has(
 			> div:is(
-					[aria-label*='애널리틱스'],
-					[aria-label*='Analytics' i]
-				)[role='button']
+					[aria-label*="애널리틱스"],
+					[aria-label*="Analytics" i]
+				)[role="button"]
 		) {
 		display: none;
 	}
 
 	/* make a space between bookmark and share icon */
-	div:has(> [data-testid='bookmark'], > [data-testid='removeBookmark']) {
+	div:has(> [data-testid="bookmark"], > [data-testid="removeBookmark"]) {
 		flex: 1 1 0;
 	}
 }
