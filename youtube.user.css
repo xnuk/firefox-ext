@@ -140,7 +140,9 @@
 		}
 	}
 
-	ytd-page-manager#page-manager#page-manager {
+	ytd-page-manager#page-manager#page-manager:has(
+			> ytd-watch-flexy[theater]:not([hidden])
+		) {
 		margin-top: 0;
 	}
 
