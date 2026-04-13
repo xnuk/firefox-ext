@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2024-04-09T22:01:06.364Z",
+    "createdAt": "2026-04-13T12:56:09.078Z",
     "redirects": [
         {
             "description": "Fast youtube",
@@ -173,23 +173,6 @@
             ]
         },
         {
-            "description": "Ruby 2 -> 3",
-            "exampleUrl": "https://ruby-doc.org/core-2.7.0/Array.html",
-            "exampleResult": "https://ruby-doc.org/core/Array.html",
-            "error": null,
-            "includePattern": "https://ruby-doc\\.org/(\\w+)-2\\.[0-9\\.]+/(.*)",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://ruby-doc.org/$1/$2",
-            "patternType": "R",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
             "description": "No YouTube Shorts",
             "exampleUrl": "https://www.youtube.com/shorts/wdOsDv-nEi8",
             "exampleResult": "https://www.youtube.com/watch?v=wdOsDv-nEi8",
@@ -230,6 +213,57 @@
                 "xmlhttprequest",
                 "history",
                 "other"
+            ]
+        },
+        {
+            "description": "weather.go.kr www redirect",
+            "exampleUrl": "https://weather.go.kr/something?something=something#something",
+            "exampleResult": "https://www.weather.go.kr/something?something=something#something",
+            "error": null,
+            "includePattern": "https://weather.go.kr/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.weather.go.kr/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Redirect youtube music",
+            "exampleUrl": "https://music.youtube.com/watch?v=vn4f6Q...",
+            "exampleResult": "https://www.youtube.com/watch?v=vn4f6Q...",
+            "error": null,
+            "includePattern": "https://music.youtube.com/watch?v=*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.youtube.com/watch?v=$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Disable youtube radio",
+            "exampleUrl": "https://www.youtube.com/watch?v=E_PfhNftyh4&list=RDE_PfhNftyh4&start_radio=1",
+            "exampleResult": "https://www.youtube.com/watch?v=E_PfhNftyh4",
+            "error": null,
+            "includePattern": "https://www.youtube.com/watch?v=*&list=*&start_radio=1",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.youtube.com/watch?v=$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
             ]
         }
     ]
